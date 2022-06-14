@@ -2,7 +2,7 @@ import { registerBlockType } from '@wordpress/blocks'
 import { ToolbarGroup, ToolbarButton } from '@wordpress/components'
 import { RichText, BlockControls } from '@wordpress/block-editor'
 
-registerBlockType("sapphirethemeblocks/sapphire-heading", {
+registerBlockType("sapphiretheme/sapphire-heading", {
 	title: "Sapphire-Heading",
 	attributes: {
 		text: {

@@ -1,14 +1,11 @@
 /* 3rd party packages */
 @import "normalize.css";
-@import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
 
 /* SASS and Global'ish Stuff */
 @import "base/variables";
-@import "base/baseline";
-@import "base/utility-classes";
+@import "base/base";
 
 /* BEM Blocks */
-@import "modules/shame";
 @import "modules/login";
 @import "modules/btn";
 @import "modules/my-notes";

@@ -129,7 +129,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)("sapphirethemeblocks/sapphire-heading", {
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)("sapphiretheme/sapphire-heading", {
   title: "Sapphire-Heading",
   attributes: {
     text: {

@@ -116,7 +116,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.registerBlockType)("sapphirethemeblocks/banner", {
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.registerBlockType)("sapphiretheme/banner", {
   title: "Banner",
   edit: EditComponent,
   save: SaveComponent
@@ -143,7 +143,7 @@ function EditComponent() {
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "page-banner__content container t-center c-white"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
-    allowedBlocks: ['sapphirethemeblocks/sapphire-heading']
+    allowedBlocks: ['sapphiretheme/sapphire-heading']
   })));
 }
 
