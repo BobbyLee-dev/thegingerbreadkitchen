@@ -10,19 +10,63 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
+/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
  // Our modules / classes
-// import MobileMenu from "./modules/MobileMenu"
-// import HeroSlider from "./modules/HeroSlider"
+
+ // import HeroSlider from "./modules/HeroSlider"
 // import Search from "./modules/Search"
 // import MyNotes from "./modules/MyNotes"
 // import Like from "./modules/Like"
 // Instantiate a new object using our modules/classes
-// const mobileMenu = new MobileMenu()
-// const heroSlider = new HeroSlider()
+
+const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"](); // const heroSlider = new HeroSlider()
 // const googleMap = new GoogleMap()
 // const search = new Search()
 // const myNotes = new MyNotes()
 // const like = new Like()
+
+/***/ }),
+
+/***/ "./src/modules/MobileMenu.js":
+/*!***********************************!*\
+  !*** ./src/modules/MobileMenu.js ***!
+  \***********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+class MobileMenu {
+  constructor() {
+    this.header = document.querySelector('.site-header');
+    this.menu = document.querySelector(".site-header .header-nav");
+    this.openButton = document.querySelector(".nav-trigger");
+    this.closeButton = document.querySelector('.nav-trigger-close');
+    this.window = window;
+    this.events();
+  }
+
+  events() {
+    this.openButton.addEventListener("click", () => this.openMenu());
+    this.closeButton.addEventListener('click', () => this.closeMenu());
+    this.window.addEventListener('resize', () => this.hideOnDesktop());
+  }
+
+  openMenu() {
+    this.header.classList.add('menu-open');
+  }
+
+  closeMenu() {
+    this.header.classList.remove('menu-open');
+  }
+
+  hideOnDesktop() {
+    if (window.innerWidth > 768) {
+      this.closeMenu();
+    }
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (MobileMenu);
 
 /***/ }),
 

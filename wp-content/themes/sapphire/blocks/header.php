@@ -6,4 +6,6 @@
 			'container' 	=> '',
 		))
 	?>
+	<div class="nav-trigger">Menu</div>
+	<div class="nav-trigger-close">Close</div>
 </header>

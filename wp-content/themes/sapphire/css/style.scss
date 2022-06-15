@@ -1,11 +1,13 @@
 /* 3rd party packages */
 @import "normalize.css";
 
-/* SASS and Global'ish Stuff */
+/* Base */
+@import "base/mixins";
 @import "base/variables";
+@import "base/keyframes";
 @import "base/base";
 
-/* BEM Blocks */
+/* Modules */
 @import "modules/login";
 @import "modules/btn";
 @import "modules/my-notes";

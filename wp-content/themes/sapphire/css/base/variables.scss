@@ -6,13 +6,21 @@ $darkOrange: #F95738;
 
 
 $olive: #E7E8E1;
+$green: #91B185;
 
 $gray-1000: #1A1B15;
 $color-light: #fff; 
+$color-dark: #000;
 
 $color-primary: $olive;
+$color-secondary: $green;
 $font-primary: 'Playfair Display', serif;
 
 $font-weight-regular: 400;
+$font-weight-bold: 700;
+
+$sm: 768px;
+$nav-bar-height: 50px;
 
 $speed-fast: .2s;
+$speed-med: .5s;

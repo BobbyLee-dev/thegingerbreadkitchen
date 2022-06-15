@@ -2,7 +2,23 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./css/style.scss ***!
   \***************************************************************************************************************************************************************************************************************************************/
 /* 3rd party packages */
-/* SASS and Global'ish Stuff */
+/* Base */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   color: #333;
   font-family: "Playfair Display", serif;
@@ -41,7 +57,7 @@ li {
   background: linear-gradient(180deg, #dedede, #adadad);
 }
 
-/* BEM Blocks */
+/* Modules */
 /* Customize Login Screen */
 body.login .button-primary {
   background-color: #F95738;
@@ -326,9 +342,36 @@ body.login {
   top: 0;
   left: 0;
   right: 0;
-  padding: 20px 40px;
+  padding: 0 40px;
   background-color: #1A1B15;
   color: #fff;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.site-header.menu-open .nav-trigger {
+  display: none;
+}
+.site-header.menu-open .nav-trigger-close {
+  display: block;
+}
+.site-header.menu-open .header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  top: 50px;
+  min-height: calc(100vh - 50px);
+  max-width: 100%;
+  left: 0;
+  right: 0;
+  background-color: #1A1B15;
+  padding: 10px 20px 40;
+  overflow: scroll;
+  -webkit-animation: fadeIn ease 0.5s;
+          animation: fadeIn ease 0.5s;
+  z-index: 10;
 }
 .site-header .header-nav {
   display: flex;
@@ -337,10 +380,22 @@ body.login {
   margin: 0;
   padding: 0;
 }
+@media (max-width: 767px) {
+  .site-header .header-nav {
+    display: none;
+    flex-direction: column;
+  }
+}
 .site-header .header-nav li {
   margin: 0 40px;
 }
+@media (max-width: 767px) {
+  .site-header .header-nav li {
+    margin: 0;
+  }
+}
 .site-header .header-nav li a {
+  display: block;
   padding: 5px 10px;
   color: #fff;
   font-family: "Playfair Display", serif;
@@ -350,8 +405,40 @@ body.login {
   text-transform: uppercase;
   transition: all 0.2s;
 }
+@media (max-width: 767px) {
+  .site-header .header-nav li a {
+    padding: 12px;
+    margin: 0;
+  }
+}
 .site-header .header-nav li a:hover {
-  color: #E7E8E1;
+  color: #91B185;
+}
+.site-header .header-nav li a:active {
+  position: relative;
+  top: 1px;
+}
+.site-header .nav-trigger {
+  display: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .site-header .nav-trigger {
+    display: block;
+  }
+}
+.site-header .nav-trigger-close {
+  font-size: 14px;
+  font-weight: 700;
+  color: #91B185;
+  text-transform: lowercase;
+  display: none;
+}
+.menu-open .site-header .nav-trigger-close {
+  display: block;
 }
 
 .site-footer {
