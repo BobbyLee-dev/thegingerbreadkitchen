@@ -424,11 +424,15 @@ body.login {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
+  color: #91B185;
 }
 @media (max-width: 767px) {
   .site-header .nav-trigger {
     display: block;
   }
+}
+.site-header .nav-trigger:hover {
+  cursor: pointer;
 }
 .site-header .nav-trigger-close {
   font-size: 14px;
@@ -436,6 +440,9 @@ body.login {
   color: #91B185;
   text-transform: lowercase;
   display: none;
+}
+.site-header .nav-trigger-close:hover {
+  cursor: pointer;
 }
 .menu-open .site-header .nav-trigger-close {
   display: block;

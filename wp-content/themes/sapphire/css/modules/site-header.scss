@@ -81,8 +81,12 @@
 		font-weight: $font-weight-regular;
 		font-size: 14px;
 		text-transform: uppercase;
+		color: $color-secondary;
 		@include media-max($sm) {
 			display: block;
+		}
+		&:hover {
+			cursor: pointer;
 		}
 	}
 	.nav-trigger-close {
@@ -91,6 +95,9 @@
 		color: $color-secondary;
 		text-transform: lowercase;
 		display: none;
+		&:hover {
+			cursor: pointer;
+		}
 		.menu-open & {
 			display: block;
 		}
