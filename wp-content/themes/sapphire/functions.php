@@ -10,7 +10,7 @@ function sapphire_files() {
   wp_enqueue_script('main-sapphire-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
   wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
   wp_enqueue_style('sapphire_main_styles', get_theme_file_uri('/build/style-index.css'));
-  wp_enqueue_style('sapphire_extra_styles', get_theme_file_uri('/build/index.css'));
+  // wp_enqueue_style('sapphire_extra_styles', get_theme_file_uri('/build/index.css'));
 
   wp_localize_script('main-sapphire-js', 'sapphireData', array(
     'root_url' => get_site_url(),
@@ -34,6 +34,16 @@ function sapphire_features() {
 }
 
 add_action('after_setup_theme', 'sapphire_features');
+
+/*==================================
+=            Inline SVG            =
+==================================*/
+function inline_svg($name) {
+	$file = get_template_directory();
+	$file .= "/svg/" . $name . ".svg";
+	return file_get_contents($file);
+}
+
 
 
 class Sapphire_block {
@@ -76,3 +86,4 @@ class PlaceholderBlock {
 }
 
 new PlaceholderBlock('header');
+new PlaceholderBlock('footer');
