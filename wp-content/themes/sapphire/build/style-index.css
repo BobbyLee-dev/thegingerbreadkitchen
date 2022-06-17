@@ -436,21 +436,6 @@ a:hover {
   color: #91B185;
 }
 
-a:hover {
-  text-decoration: none;
-}
-
-p,
-ul,
-ol {
-  margin: 0 0 1.65em 0;
-}
-
-p,
-li {
-  line-height: 1.65;
-}
-
 .placeholder-block {
   padding: 20px;
   text-align: center;
@@ -920,6 +905,12 @@ body.login {
   font-weight: 400;
   font-size: 15px;
   line-height: 1.35em;
+}
+.site-footer .f-copyright a {
+  color: #fff;
+}
+.site-footer .f-copyright a:hover {
+  color: #91B185;
 }
 
 .main-navigation {

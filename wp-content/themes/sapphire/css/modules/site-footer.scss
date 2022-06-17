@@ -66,6 +66,12 @@
 		font-weight: $font-weight-regular;
 		font-size: 15px;
 		line-height: 1.35em;
+		a {
+			color: $color-light;
+			&:hover {
+				color: $color-secondary
+			}
+		}
 	}
   
 }
