@@ -1,0 +1,49 @@
+$icomoon-font-family: "icons-gbk" !default;
+$icomoon-font-path: "../assets/fonts" !default;
+
+$icon-youtube: "\e900";
+$icon-pinterest: "\e901";
+$icon-instagram: "\e902";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?53b7bn') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?53b7bn') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?53b7bn##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-youtube {
+  &:before {
+    content: $icon-youtube; 
+  }
+}
+.icon-pinterest {
+  &:before {
+    content: $icon-pinterest; 
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram; 
+  }
+}
+

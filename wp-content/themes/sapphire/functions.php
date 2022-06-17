@@ -40,7 +40,7 @@ add_action('after_setup_theme', 'sapphire_features');
 ==================================*/
 function inline_svg($name) {
 	$file = get_template_directory();
-	$file .= "/svg/" . $name . ".svg";
+	$file .= "/assets/svg/" . $name . ".svg";
 	return file_get_contents($file);
 }
 

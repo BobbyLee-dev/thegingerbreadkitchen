@@ -35,3 +35,17 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+@mixin contain($size: $lg, $paddingTop : null, $paddingBottom : null) {
+  padding-right: calc(40px + (50vw - (#{$size} / 2)));
+  padding-left: calc(40px + (50vw - (#{$size} / 2)));
+
+  @if ( $paddingTop ) {
+    padding-top: $paddingTop;
+    padding-bottom: $paddingTop;
+    @if( $paddingBottom) {
+      padding-top: $paddingTop;
+      padding-bottom: $paddingBottom;
+    }
+  }
+}

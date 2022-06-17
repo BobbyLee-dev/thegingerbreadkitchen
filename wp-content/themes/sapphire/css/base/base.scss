@@ -31,6 +31,10 @@ img {
 
 a {
   color: $mainBlue;
+	transition: color $speed-fast;
+	&:hover {
+		color: $color-secondary;
+	}
 }
 
 a:hover {

@@ -1,9 +1,9 @@
 <footer class="site-footer">
 
 	<div class="f-social">
-		<a href="#" target="_blank" aria-label="YouTube" rel="nofollow"></a>
-		<a href="#" target="_blank"><i title="Pinterest" class="fa-brands fa-pinterest-p"></i></a>
-		<a href="#" target="_blank"><i title="Instagram" class="fa-brands fa-instagram"></i></a>
+		<a href="#" target="_blank" aria-label="YouTube" rel="nofollow"><i class="icon-youtube"></i></a>
+		<a href="#" target="_blank" aria-label="Pinterest" rel="nofollow"><i class="icon-pinterest"></i></a>
+		<a href="#" target="_blank" aris-label-="Instagram" rel="nofollow"><i class="icon-instagram"></i></a>
 	</div>
 
 	<?php // Footer Nav
