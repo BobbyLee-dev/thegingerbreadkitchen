@@ -60,6 +60,15 @@
 			}
 		}
 	}
+	.cat-cup {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 50px;
+		svg {
+			width: 100px;
+			max-width: 100%;
+		}
+	}
 	.f-copyright {
 		text-align: center;
 		font-family: $font-primary;

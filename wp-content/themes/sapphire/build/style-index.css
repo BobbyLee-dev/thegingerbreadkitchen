@@ -899,6 +899,15 @@ body.login {
 .site-footer .footer-nav li a:hover {
   color: #91B185;
 }
+.site-footer .cat-cup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.site-footer .cat-cup svg {
+  width: 100px;
+  max-width: 100%;
+}
 .site-footer .f-copyright {
   text-align: center;
   font-family: "Playfair Display", serif;

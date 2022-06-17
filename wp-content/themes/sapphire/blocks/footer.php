@@ -14,6 +14,9 @@
 		))
 	?>
 
+	<!-- Cat Cup -->
+	<div class="cat-cup"><?php echo inline_svg('cat-cup') ?></div>
+
 	<div class="f-copyright">&copy; <?php echo date('Y') ?> GingerbreadKitchen. Design by Sapphire Web and Design.</div>
 
 </footer>
