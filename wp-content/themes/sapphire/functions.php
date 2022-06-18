@@ -6,10 +6,15 @@ function remove_admin_bar() {
 }
 
 
+
+
 function sapphire_files() {
+	// remove jquery from loading on frontend
+	if ( !is_admin() ) wp_deregister_script('jquery');
+
   wp_enqueue_script('main-sapphire-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
-  wp_enqueue_style('custom-google-fonts-playfair', '//fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
-  wp_enqueue_style('custom-google-fonts-lobster', '//fonts.googleapis.com/css2?family=Lobster');
+  // wp_enqueue_style('custom-google-fonts-playfair', '//fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+  // wp_enqueue_style('custom-google-fonts-lobster', '//fonts.googleapis.com/css2?family=Lobster');
   wp_enqueue_style('sapphire_main_styles', get_theme_file_uri('/build/style-index.css'));
   // wp_enqueue_style('sapphire_extra_styles', get_theme_file_uri('/build/index.css'));
 
@@ -61,7 +66,7 @@ function social_media() {
 		<div class="social-icons">
 			<a href="#" target="_blank" aria-label="YouTube" rel="nofollow"><i class="icon-youtube"></i></a>
 			<a href="#" target="_blank" aria-label="Pinterest" rel="nofollow"><i class="icon-pinterest"></i></a>
-			<a href="#" target="_blank" aria-label-="Instagram" rel="nofollow"><i class="icon-instagram"></i></a>
+			<a href="#" target="_blank" aria-label="Instagram" rel="nofollow"><i class="icon-instagram"></i></a>
 		</div>
 	';
 }

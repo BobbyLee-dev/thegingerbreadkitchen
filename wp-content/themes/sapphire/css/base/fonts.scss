@@ -1,3 +1,42 @@
+$fonts-path: "../assets/fonts" !default;
+@font-face {
+	font-family: 'Lobster';
+	src: url('#{$fonts-path}/Lobster-Regular.woff2') format('woff2'),
+		url('#{$fonts-path}/Lobster-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Playfair Display';
+	src: url('#{$fonts-path}/PlayfairDisplay-Italic.woff2') format('woff2'),
+		url('#{$fonts-path}/PlayfairDisplay-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Playfair Display';
+	src: url('#{$fonts-path}/PlayfairDisplay-Regular.woff2') format('woff2'),
+		url('#{$fonts-path}/PlayfairDisplay-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Playfair Display';
+	src: url('#{$fonts-path}/PlayfairDisplay-Bold.woff2') format('woff2'),
+		url('#{$fonts-path}/PlayfairDisplay-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+
 $icomoon-font-family: "icons-gbk" !default;
 $icomoon-font-path: "../assets/fonts" !default;
 
