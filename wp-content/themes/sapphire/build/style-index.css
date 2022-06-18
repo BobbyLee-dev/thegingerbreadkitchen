@@ -964,7 +964,7 @@ body.login {
     max-width: 200px;
   }
 }
-.header-banner .header-logo svg {
+.header-banner .header-logo svg, .header-banner .header-logo img {
   width: 100%;
   height: auto;
 }
