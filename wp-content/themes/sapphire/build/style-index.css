@@ -902,7 +902,9 @@ body.login {
 .site-footer .cat-cup {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin: 0 auto 50px;
+  background: none;
+  border: none;
 }
 .site-footer .cat-cup svg {
   width: 100px;

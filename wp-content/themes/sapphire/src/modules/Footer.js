@@ -7,11 +7,12 @@ class Footer {
 
   events() {
 		if (this.catCupSvg && this.cat) { 
-			this.catCupSvg.addEventListener("click", () => this.toggleCat())
+			this.catCupSvg.addEventListener("click", (e) => this.toggleCat(e))
 		}
   }
 
-  toggleCat() {
+  toggleCat(e) {
+		e.preventDefault();
 		if (this.catCupSvg.classList.contains('show-cat')) {
 			this.catCupSvg.classList.remove('show-cat')
 		} else {
