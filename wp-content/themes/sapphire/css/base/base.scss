@@ -44,3 +44,25 @@ a {
   font-size: 1.65rem;
   background: linear-gradient(180deg, #dedede, #adadad);
 }
+
+.social-icons {
+	a {
+		text-decoration: none;
+		display: block;
+
+		&:hover {
+			i {
+				// color: $gray-1000;
+				background-color: $color-secondary;
+			}
+		}
+
+		i {
+			font-size: 40px;
+			border-radius: 50%;
+			background-color: $color-primary-alt;
+			color: $color-light;
+			transition: all $speed-fast;
+		}
+	}
+}

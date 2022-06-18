@@ -1,0 +1,92 @@
+.header-banner {
+	position: relative;
+	display: flex;
+	align-items: center;
+	@include contain($lg, 100px);
+	@include media-max($lg) {
+		padding: 80px 40px;
+	}
+	@include media-max($md) {
+		flex-direction: column-reverse;
+		padding: 60px 40px;
+	}
+	@include media-max($sm) {
+		padding: 40px 20px;
+	}
+	.header-social {
+		.social-icons {
+			@include media-max($md) {
+				display: flex;
+				justify-content: center;
+
+			}
+		}
+		a {
+				margin-bottom: 20px;
+			@include media-max($md) {
+				margin-right: 20px;
+				margin-bottom: 0;
+			}
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+	.site-branding {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-basis: 0;
+		flex-grow: 1;
+		margin-left: -60px;
+		@include media-max($md) {
+			flex-basis: auto;
+			flex-grow: inherit;
+			margin-left: 0;
+			margin-bottom: 60px;
+		}
+		@include media-max($xs) {
+			flex-direction: column;
+		}
+		@include media-max($xxs) {
+			margin-bottom: 40px;
+		}
+	}
+	.header-logo {
+		max-width: 286px;
+		margin-right: 25px;
+		@include media-max($xs) {
+			margin-right: 0;
+		}
+		@include media-max($xxs) {
+			max-width: 200px;
+		}
+		svg {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.site-title {
+		margin: 0;
+		font-family: $font-secondary;
+		font-size: 60px;
+		font-weight: $font-weight-regular;
+		line-height: 1.3em;
+		color: $color-dark;
+		text-shadow: -4px 4px 0px $color-primary-alt;
+		@include media-max($xs) {
+			text-align: center;
+		}
+		@include media-max($xxs) {
+			font-size: 50px;
+		}
+		> div {
+			&:first-of-type {
+				margin-left: 75px;
+				@include media-max($xs) {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}

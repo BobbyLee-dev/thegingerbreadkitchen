@@ -84,9 +84,11 @@ class MobileMenu {
   }
 
   events() {
-    this.openButton.addEventListener("click", () => this.openMenu());
-    this.closeButton.addEventListener('click', () => this.closeMenu());
-    this.window.addEventListener('resize', () => this.hideOnDesktop());
+    if (this.openButton && this.closeButton) {
+      this.openButton.addEventListener("click", () => this.openMenu());
+      this.closeButton.addEventListener('click', () => this.closeMenu());
+      this.window.addEventListener('resize', () => this.hideOnDesktop());
+    }
   }
 
   openMenu() {

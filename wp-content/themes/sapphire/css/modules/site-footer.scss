@@ -9,28 +9,15 @@
 		padding: 60px 20px;
 	}
 	.f-social {
-		margin-bottom: 50px;
-		display: flex;
-		justify-content: center;
-		a {
-			margin-right: 30px;
-			text-decoration: none;
-			display: block;
-			&:last-of-type {
-				margin-right: 0;
-			}
-			&:hover {
-				i {
-					// color: $gray-1000;
-					background-color: $color-secondary;
+		.social-icons {
+			margin-bottom: 50px;
+			display: flex;
+			justify-content: center;
+			a {
+				margin-right: 30px;
+				&:last-of-type {
+					margin-right: 0;
 				}
-			}
-			i {
-				font-size: 40px;
-				border-radius: 50%;
-				background-color: $color-primary-alt;
-				color: $color-light;
-				transition: all $speed-fast;
 			}
 		}
 	}

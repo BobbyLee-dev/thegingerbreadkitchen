@@ -1,23 +1,26 @@
 .site-header {
-  z-index: 3;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 0 40px;
+	z-index: 3;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0 40px;
 	background-color: $gray-1000;
 	color: $color-light;
 	height: $nav-bar-height;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	&.menu-open {
 		.nav-trigger {
 			display: none;
 		}
+
 		.nav-trigger-close {
 			display: block;
 		}
+
 		.header-nav {
 			display: flex;
 			align-items: center;
@@ -35,22 +38,27 @@
 			z-index: 10;
 		}
 	}
+
 	.header-nav {
 		display: flex;
 		justify-content: center;
 		list-style: none;
 		margin: 0;
 		padding: 0;
+
 		@include media-max($sm) {
 			display: none;
 			flex-direction: column;
 
 		}
+
 		li {
 			margin: 0 40px;
+
 			@include media-max($sm) {
 				margin: 0;
 			}
+
 			a {
 				display: block;
 				padding: 5px 10px;
@@ -61,13 +69,16 @@
 				text-decoration: none;
 				text-transform: uppercase;
 				transition: all $speed-fast;
+
 				@include media-max($sm) {
 					padding: 12px;
 					margin: 0
 				}
+
 				&:hover {
 					color: $color-secondary;
 				}
+
 				&:active {
 					position: relative;
 					top: 1px;
@@ -75,6 +86,7 @@
 			}
 		}
 	}
+
 	.nav-trigger {
 		display: none;
 		font-size: 14px;
@@ -82,22 +94,27 @@
 		font-size: 14px;
 		text-transform: uppercase;
 		color: $color-secondary;
+
 		@include media-max($sm) {
 			display: block;
 		}
+
 		&:hover {
 			cursor: pointer;
 		}
 	}
+
 	.nav-trigger-close {
 		font-size: 14px;
 		font-weight: $font-weight-bold;
 		color: $color-secondary;
 		text-transform: lowercase;
 		display: none;
+
 		&:hover {
 			cursor: pointer;
 		}
+
 		.menu-open & {
 			display: block;
 		}

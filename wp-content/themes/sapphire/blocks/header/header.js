@@ -1,3 +1,4 @@
+
 wp.blocks.registerBlockType("sapphiretheme/header", {
   title: "Sapphire Header",
   edit: function () {
