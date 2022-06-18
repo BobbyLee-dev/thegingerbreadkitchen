@@ -5,12 +5,20 @@ function remove_admin_bar() {
 	show_admin_bar(false);
 }
 
+/** * Completely Remove jQuery From WordPress Frontend */
+function my_init() {
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', false);
+    }
+}
+add_action('init', 'my_init');
+
 
 
 
 function sapphire_files() {
 	// remove jquery from loading on frontend
-	if ( !is_admin() ) wp_deregister_script('jquery');
 
   wp_enqueue_script('main-sapphire-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
   // wp_enqueue_style('custom-google-fonts-playfair', '//fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
