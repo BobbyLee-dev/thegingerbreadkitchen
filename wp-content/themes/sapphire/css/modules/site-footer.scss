@@ -67,6 +67,16 @@
 		svg {
 			width: 100px;
 			max-width: 100%;
+			&.show-cat {
+				.cat {
+					transform: translateY(0);
+					transition: all $speed-fast ease-in-out;
+				}
+			}
+			.cat {
+				transform: translateY(15px);
+				// transition: all $speed-med ease-in-out;
+			}
 		}
 	}
 	.f-copyright {

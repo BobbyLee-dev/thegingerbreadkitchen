@@ -908,6 +908,13 @@ body.login {
   width: 100px;
   max-width: 100%;
 }
+.site-footer .cat-cup svg.show-cat .cat {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+.site-footer .cat-cup svg .cat {
+  transform: translateY(15px);
+}
 .site-footer .f-copyright {
   text-align: center;
   font-family: "Playfair Display", serif;
