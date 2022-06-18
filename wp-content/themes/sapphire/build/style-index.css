@@ -871,8 +871,12 @@ body.login {
 }
 @media (max-width: 767px) {
   .header-banner {
-    padding: 40px 20px;
+    padding: 30px 20px 40px;
   }
+}
+.header-banner .header-social {
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 979px) {
   .header-banner .header-social .social-icons {

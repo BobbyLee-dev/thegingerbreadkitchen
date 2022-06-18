@@ -11,9 +11,11 @@
 		padding: 60px 40px;
 	}
 	@include media-max($sm) {
-		padding: 40px 20px;
+		padding: 30px 20px 40px;
 	}
 	.header-social {
+		position: relative;
+		z-index: 2;
 		.social-icons {
 			@include media-max($md) {
 				display: flex;
