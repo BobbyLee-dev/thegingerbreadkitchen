@@ -5,18 +5,6 @@ function remove_admin_bar() {
 	show_admin_bar(false);
 }
 
-/** * Completely Remove jQuery From WordPress Frontend */
-function my_init() {
-    if (!is_admin()) {
-        wp_deregister_script('jquery');
-        wp_register_script('jquery', false);
-    }
-}
-add_action('init', 'my_init');
-
-
-
-
 function sapphire_files() {
 	// remove jquery from loading on frontend
 
@@ -30,6 +18,11 @@ function sapphire_files() {
     'root_url' => get_site_url(),
     'nonce' => wp_create_nonce('wp_rest')
   ));
+
+	if (!is_admin()) {
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', false);
+	}
 
 }
 
