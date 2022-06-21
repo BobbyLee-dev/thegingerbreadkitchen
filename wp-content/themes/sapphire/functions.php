@@ -113,7 +113,7 @@ class Sapphire_block {
 	}
 }
 
-new Sapphire_block('image-content');
+new Sapphire_block('split-image-content');
 
 class Sapphire_block_php_render {
 	function __construct($name) {

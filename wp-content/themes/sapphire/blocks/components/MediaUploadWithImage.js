@@ -6,37 +6,26 @@ import { Button } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 /**
- * Vendor dependencies
- */
-import PropTypes from 'prop-types';
-
-/**
  * Media upload with image
  */
-const MediaUploadWithImage = ({ formLogo, openMedia, setAttributes }) => {
+const MediaUploadWithImage = ({ image, openMedia, setAttributes }) => {
 	return (
 		<MediaUploadCheck>
 			<div className="admin-img-wrap">
 				<img
-					src={formLogo}
+					src={image}
 					onClick={openMedia}
 					style={{ cursor: 'pointer' }}
 				/>
 			</div>
 			<Button isPrimary onClick={openMedia}>
-				{__('Change Image', 'donation-form')}
+				{__('Change Image', 'sapphiretheme')}
 			</Button>
 			<Button isLink onClick={() => setAttributes({ formLogo: '' })}>
-				{__('Remove Image', 'donation-form')}
+				{__('Remove Image', 'sapphiretheme')}
 			</Button>
 		</MediaUploadCheck>
 	);
-};
-
-MediaUploadWithImage.PropTypes = {
-	formLogo: PropTypes.string,
-	openMedia: PropTypes.func,
-	setAttributes: PropTypes.func,
 };
 
 export default MediaUploadWithImage;

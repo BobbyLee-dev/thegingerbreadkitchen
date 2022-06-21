@@ -6,27 +6,18 @@ import { Button } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 /**
- * Vendor dependencies
- */
-import PropTypes from 'prop-types';
-
-/**
  * Media upload with no image
  */
 const MediaUploadNoImage = ({ openMedia }) => {
 	return (
 		<MediaUploadCheck>
-			<div className="form-logo-wrap">
+			<div className="image-wrap">
 				<Button isPrimary onClick={openMedia}>
-					{__('Select an Image', 'donation-form')}
+					{__('Select an Image', 'sapphiretheme')}
 				</Button>
 			</div>
 		</MediaUploadCheck>
 	);
-};
-
-MediaUploadNoImage.PropTypes = {
-	openMedia: PropTypes.func,
 };
 
 export default MediaUploadNoImage;
