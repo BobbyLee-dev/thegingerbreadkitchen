@@ -487,8 +487,27 @@ a:hover {
 }
 
 /* Modules */
+.split-image-content {
+  display: flex;
+  align-items: center;
+}
 .split-image-content .image-wrap {
   width: 50%;
+  position: relative;
+}
+.split-image-content .image-wrap .admin-button-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.split-image-content .block-content-wrap {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 40px 50px;
+  background-color: rgba(255, 255, 255, 0.95);
+  margin-left: -70px;
+  position: relative;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

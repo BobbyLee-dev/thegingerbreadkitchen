@@ -12,7 +12,6 @@ const AdminImage = ({
 	function selectImage(media) {
 		setAttributes({ image: media.sizes.full.url });
 		setAttributes({ imageID: media.id });
-		console.log(attributes);
 	}
 
 	return (
@@ -23,7 +22,6 @@ const AdminImage = ({
 			render={({ open }) => {
 				return (
 					<div className="image-wrap">
-						{console.log(image)}
 						{image ? (
 							<MediaUploadWithImage
 								image={image}

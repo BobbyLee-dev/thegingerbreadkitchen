@@ -11,6 +11,14 @@ registerBlockType('sapphiretheme/split-image-content', {
 		imageID: {
 			type: 'number',
 		},
+		heading: {
+			type: 'string',
+			default: '',
+		},
+		content: {
+			type: 'string',
+			default: '',
+		},
 	},
 	edit: Edit,
 	save: SaveComponent,

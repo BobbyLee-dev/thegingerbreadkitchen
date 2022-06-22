@@ -18,12 +18,19 @@ const MediaUploadWithImage = ({ image, openMedia, setAttributes }) => {
 					style={{ cursor: 'pointer' }}
 				/>
 			</div>
-			<Button isPrimary onClick={openMedia}>
-				{__('Change Image', 'sapphiretheme')}
-			</Button>
-			<Button isLink onClick={() => setAttributes({ formLogo: '' })}>
-				{__('Remove Image', 'sapphiretheme')}
-			</Button>
+			<div class="admin-button-wrap">
+				<Button isPrimary onClick={openMedia} className="admin-button">
+					{__('Change Image', 'sapphiretheme')}
+				</Button>
+				<Button
+					isDestructive
+					isPrimary
+					onClick={() => setAttributes({ formLogo: '' })}
+					className="admin-button remove-button"
+				>
+					{__('Remove Image', 'sapphiretheme')}
+				</Button>
+			</div>
 		</MediaUploadCheck>
 	);
 };

@@ -36,7 +36,6 @@ const AdminImage = _ref => {
     setAttributes({
       imageID: media.id
     });
-    console.log(attributes);
   }
 
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
@@ -49,7 +48,7 @@ const AdminImage = _ref => {
       } = _ref2;
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
         className: "image-wrap"
-      }, console.log(image), image ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_MediaUploadWithImage__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, image ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_MediaUploadWithImage__WEBPACK_IMPORTED_MODULE_3__["default"], {
         image: image,
         openMedia: open,
         setAttributes: setAttributes
@@ -97,10 +96,13 @@ const MediaUploadNoImage = _ref => {
   } = _ref;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "image-wrap"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "admin-button-wrap"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     isPrimary: true,
-    onClick: openMedia
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Select an Image', 'sapphiretheme'))));
+    onClick: openMedia,
+    className: "admin-button"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Select an Image', 'sapphiretheme')))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (MediaUploadNoImage);
@@ -148,15 +150,20 @@ const MediaUploadWithImage = _ref => {
     style: {
       cursor: 'pointer'
     }
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    class: "admin-button-wrap"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     isPrimary: true,
-    onClick: openMedia
+    onClick: openMedia,
+    className: "admin-button"
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Change Image', 'sapphiretheme')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-    isLink: true,
+    isDestructive: true,
+    isPrimary: true,
     onClick: () => setAttributes({
       formLogo: ''
-    })
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Remove Image', 'sapphiretheme')));
+    }),
+    className: "admin-button remove-button"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Remove Image', 'sapphiretheme'))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (MediaUploadWithImage);
@@ -192,8 +199,29 @@ const Edit = _ref => {
     image: attributes.image,
     setAttributes: setAttributes
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    class: ""
-  }, "Hi my name is Sofya"));
+    class: "block-content-wrap"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+    allowedFormats: [],
+    className: "block-heading",
+    value: attributes.heading,
+    onChange: text => setAttributes({
+      heading: text
+    }),
+    placeholder: "Heading",
+    tagName: "h2"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+    className: "block-text",
+    value: attributes.content,
+    onChange: text => {
+      setAttributes({
+        content: text
+      });
+      console.log(attributes);
+    },
+    placeholder: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    tagName: "div",
+    multiline: "p"
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Edit);
@@ -339,6 +367,14 @@ __webpack_require__.r(__webpack_exports__);
     },
     imageID: {
       type: 'number'
+    },
+    heading: {
+      type: 'string',
+      default: ''
+    },
+    content: {
+      type: 'string',
+      default: ''
     }
   },
   edit: _Edit__WEBPACK_IMPORTED_MODULE_1__["default"],

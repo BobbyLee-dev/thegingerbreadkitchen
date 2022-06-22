@@ -12,9 +12,15 @@ const MediaUploadNoImage = ({ openMedia }) => {
 	return (
 		<MediaUploadCheck>
 			<div className="image-wrap">
-				<Button isPrimary onClick={openMedia}>
-					{__('Select an Image', 'sapphiretheme')}
-				</Button>
+				<div className="admin-button-wrap">
+					<Button
+						isPrimary
+						onClick={openMedia}
+						className="admin-button"
+					>
+						{__('Select an Image', 'sapphiretheme')}
+					</Button>
+				</div>
 			</div>
 		</MediaUploadCheck>
 	);
