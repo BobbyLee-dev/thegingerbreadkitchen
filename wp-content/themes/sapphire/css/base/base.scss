@@ -1,48 +1,47 @@
 @mixin atSmall {
-  @media (min-width: 530px) {
-    @content;
-  }
+	@media (min-width: 530px) {
+		@content;
+	}
 }
 
 @mixin atSmallMedium {
-  @media (min-width: 767px) {
-    @content;
-  }
+	@media (min-width: 767px) {
+		@content;
+	}
 }
 
 @mixin atMedium {
-  @media (min-width: 960px) {
-    @content;
-  }
+	@media (min-width: 960px) {
+		@content;
+	}
 }
 
 body {
-  color: #333;
-  font-family: $font-primary;
-  overflow-x: hidden;
-  position: relative;
+	color: #333;
+	font-family: $font-primary;
+	overflow-x: hidden;
+	position: relative;
 	margin-top: $nav-bar-height;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 a {
-  color: $mainBlue;
+	color: $mainBlue;
 	transition: color $speed-fast;
 	&:hover {
 		color: $color-secondary;
 	}
 }
 
-
 .placeholder-block {
-  padding: 20px;
-  text-align: center;
-  font-size: 1.65rem;
-  background: linear-gradient(180deg, #dedede, #adadad);
+	padding: 20px;
+	text-align: center;
+	font-size: 1.65rem;
+	background: linear-gradient(180deg, #dedede, #adadad);
 }
 
 .social-icons {

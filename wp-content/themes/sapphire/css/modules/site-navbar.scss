@@ -49,7 +49,6 @@
 		@include media-max($sm) {
 			display: none;
 			flex-direction: column;
-
 		}
 
 		li {
@@ -72,7 +71,7 @@
 
 				@include media-max($sm) {
 					padding: 12px;
-					margin: 0
+					margin: 0;
 				}
 
 				&:hover {

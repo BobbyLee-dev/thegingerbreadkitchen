@@ -1,41 +1,39 @@
 $fonts-path: "../assets/fonts" !default;
 @font-face {
-	font-family: 'Lobster';
-	src: url('#{$fonts-path}/Lobster-Regular.woff2') format('woff2'),
-		url('#{$fonts-path}/Lobster-Regular.woff') format('woff');
+	font-family: "Lobster";
+	src: url("#{$fonts-path}/Lobster-Regular.woff2") format("woff2"),
+		url("#{$fonts-path}/Lobster-Regular.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Playfair Display';
-	src: url('#{$fonts-path}/PlayfairDisplay-Italic.woff2') format('woff2'),
-		url('#{$fonts-path}/PlayfairDisplay-Italic.woff') format('woff');
+	font-family: "Playfair Display";
+	src: url("#{$fonts-path}/PlayfairDisplay-Italic.woff2") format("woff2"),
+		url("#{$fonts-path}/PlayfairDisplay-Italic.woff") format("woff");
 	font-weight: normal;
 	font-style: italic;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Playfair Display';
-	src: url('#{$fonts-path}/PlayfairDisplay-Regular.woff2') format('woff2'),
-		url('#{$fonts-path}/PlayfairDisplay-Regular.woff') format('woff');
+	font-family: "Playfair Display";
+	src: url("#{$fonts-path}/PlayfairDisplay-Regular.woff2") format("woff2"),
+		url("#{$fonts-path}/PlayfairDisplay-Regular.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Playfair Display';
-	src: url('#{$fonts-path}/PlayfairDisplay-Bold.woff2') format('woff2'),
-		url('#{$fonts-path}/PlayfairDisplay-Bold.woff') format('woff');
+	font-family: "Playfair Display";
+	src: url("#{$fonts-path}/PlayfairDisplay-Bold.woff2") format("woff2"),
+		url("#{$fonts-path}/PlayfairDisplay-Bold.woff") format("woff");
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
 }
-
-
 
 $icomoon-font-family: "icons-gbk" !default;
 $icomoon-font-path: "../assets/fonts" !default;
@@ -45,44 +43,46 @@ $icon-pinterest: "\e901";
 $icon-instagram: "\e902";
 
 @font-face {
-  font-family: '#{$icomoon-font-family}';
-  src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?53b7bn') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?53b7bn') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?53b7bn##{$icomoon-font-family}') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+	font-family: "#{$icomoon-font-family}";
+	src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?53b7bn")
+			format("truetype"),
+		url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?53b7bn")
+			format("woff"),
+		url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?53b7bn##{$icomoon-font-family}")
+			format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: '#{$icomoon-font-family}' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+[class^="icon-"],
+[class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: "#{$icomoon-font-family}" !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .icon-youtube {
-  &:before {
-    content: $icon-youtube; 
-  }
+	&:before {
+		content: $icon-youtube;
+	}
 }
 .icon-pinterest {
-  &:before {
-    content: $icon-pinterest; 
-  }
+	&:before {
+		content: $icon-pinterest;
+	}
 }
 .icon-instagram {
-  &:before {
-    content: $icon-instagram; 
-  }
+	&:before {
+		content: $icon-instagram;
+	}
 }
-

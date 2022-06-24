@@ -8,8 +8,8 @@
 }
 
 @function calculateMqSize($size) {
-  $maxSize : $size - 1px;
-  @return $maxSize;
+	$maxSize: $size - 1px;
+	@return $maxSize;
 }
 
 @mixin media-max($max) {
@@ -17,7 +17,7 @@
 		@content;
 	}
 }
-	
+
 @mixin media-between($min, $max) {
 	@media (min-width: $min) and (max-width: $max) {
 		@content;
@@ -26,8 +26,8 @@
 
 // Letter Spacing
 @function ls($size) {
-  $va: calc($size / 1000);
-  @return $va * 1em;
+	$va: calc($size / 1000);
+	@return $va * 1em;
 }
 
 // Font Smoothing
@@ -36,16 +36,16 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-@mixin contain($size: $lg, $paddingTop : null, $paddingBottom : null) {
-  padding-right: calc(40px + (50vw - (#{$size} / 2)));
-  padding-left: calc(40px + (50vw - (#{$size} / 2)));
+@mixin contain($size: $lg, $paddingTop: null, $paddingBottom: null) {
+	padding-right: calc(40px + (50vw - (#{$size} / 2)));
+	padding-left: calc(40px + (50vw - (#{$size} / 2)));
 
-  @if ( $paddingTop ) {
-    padding-top: $paddingTop;
-    padding-bottom: $paddingTop;
-    @if( $paddingBottom) {
-      padding-top: $paddingTop;
-      padding-bottom: $paddingBottom;
-    }
-  }
+	@if ($paddingTop) {
+		padding-top: $paddingTop;
+		padding-bottom: $paddingTop;
+		@if ($paddingBottom) {
+			padding-top: $paddingTop;
+			padding-bottom: $paddingBottom;
+		}
+	}
 }

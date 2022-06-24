@@ -20,11 +20,10 @@
 			@include media-max($md) {
 				display: flex;
 				justify-content: center;
-
 			}
 		}
 		a {
-				margin-bottom: 20px;
+			margin-bottom: 20px;
 			@include media-max($md) {
 				margin-right: 20px;
 				margin-bottom: 0;
@@ -63,7 +62,8 @@
 		@include media-max($xxs) {
 			max-width: 200px;
 		}
-		svg, img {
+		svg,
+		img {
 			width: 100%;
 			height: auto;
 		}
