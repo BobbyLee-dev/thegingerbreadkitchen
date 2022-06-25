@@ -32,7 +32,7 @@ function sapphire_features() {
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
   add_theme_support('editor-styles');
-  add_editor_style(array('//fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap', 'build/style-index.css', 'build/index.css'));
+  add_editor_style(array('//fonts.googleapis.com/css2?family=EB+Garamond&family=Lobster&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap', 'build/style-index.css', 'build/index.css'));
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'header' => esc_html__( 'Header', 'sapphire' ),

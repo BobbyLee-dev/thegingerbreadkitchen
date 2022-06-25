@@ -1,4 +1,14 @@
 $fonts-path: "../assets/fonts" !default;
+/* eb-garamond-regular - latin */
+@font-face {
+	font-family: "EB Garamond";
+	font-style: normal;
+	font-weight: 400;
+	src: url("#{$fonts-path}/eb-garamond-v25-latin-regular.woff2")
+			format("woff2"),
+		url("#{$fonts-path}/eb-garamond-v25-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 @font-face {
 	font-family: "Lobster";
 	src: url("#{$fonts-path}/Lobster-Regular.woff2") format("woff2"),

@@ -365,6 +365,14 @@ figure {
 }
 
 /* Base */
+/* eb-garamond-regular - latin */
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/eb-garamond-v25-latin-regular.12641edd.woff2) format("woff2"), url(fonts/eb-garamond-v25-latin-regular.659402ed.woff) format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 @font-face {
   font-family: "Lobster";
   src: url(fonts/Lobster-Regular.d7345a2c.woff2) format("woff2"), url(fonts/Lobster-Regular.b7d72ed8.woff) format("woff");
@@ -839,6 +847,9 @@ a:hover {
   width: 50%;
   position: relative;
 }
+.split-image-content .image-wrap img {
+  width: 100%;
+}
 .split-image-content .image-wrap .admin-button-wrap {
   position: absolute;
   bottom: 0;
@@ -855,12 +866,23 @@ a:hover {
   position: relative;
   z-index: 2;
 }
+.split-image-content .block-content-wrap .block-heading {
+  margin-bottom: 30px;
+}
+.split-image-content .block-content-wrap .block-text {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-family: "EB Garamond", serif;
+  font-size: 18px;
+  line-height: 1.3em;
+}
 .split-image-content .block-content-wrap .button {
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   align-self: flex-end;
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
