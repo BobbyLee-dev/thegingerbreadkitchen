@@ -1,27 +1,18 @@
-@mixin atSmall {
-	@media (min-width: 530px) {
-		@content;
-	}
-}
-
-@mixin atSmallMedium {
-	@media (min-width: 767px) {
-		@content;
-	}
-}
-
-@mixin atMedium {
-	@media (min-width: 960px) {
-		@content;
-	}
-}
-
 body {
 	color: #333;
 	font-family: $font-primary;
 	overflow-x: hidden;
 	position: relative;
 	margin-top: $nav-bar-height;
+}
+
+.wrapper {
+	max-width: 1150px;
+	margin: auto;
+	padding: 0 40px;
+	@include media-max($sm) {
+		padding: 0 30px;
+	}
 }
 
 img {

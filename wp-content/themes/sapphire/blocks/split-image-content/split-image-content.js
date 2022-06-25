@@ -4,11 +4,9 @@ import Edit from './Edit';
 registerBlockType('sapphiretheme/split-image-content', {
 	title: 'Sapphire Split Image Content',
 	attributes: {
-		attributes: {
-			align: {
-				type: 'string',
-				default: 'full',
-			},
+		align: {
+			type: 'string',
+			default: 'full',
 		},
 		image: {
 			type: 'string',
@@ -24,6 +22,16 @@ registerBlockType('sapphiretheme/split-image-content', {
 		content: {
 			type: 'string',
 			default: '',
+		},
+		buttonText: {
+			type: 'string',
+			default: '',
+		},
+		linkObject: {
+			type: 'object',
+			default: {
+				url: '',
+			},
 		},
 	},
 	getEditWrapperProps() {
