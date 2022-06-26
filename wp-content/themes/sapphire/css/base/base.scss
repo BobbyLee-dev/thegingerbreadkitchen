@@ -1,6 +1,7 @@
 body {
 	color: #333;
-	font-family: $font-primary;
+	font-family: $font-primary-alt;
+	line-height: 1.3em;
 	overflow-x: hidden;
 	position: relative;
 	margin-top: $nav-bar-height;
@@ -15,13 +16,52 @@ body {
 	}
 }
 
+.button {
+	appearance: none;
+	border: 1px solid $color-secondary-300;
+	border-radius: 0;
+	color: $color-secondary-500;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 15px;
+	font-family: $font-primary;
+	line-height: 1;
+	margin: 0;
+	padding: 10px 20px 11px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: $speed-fast all ease;
+	vertical-align: middle;
+	outline: none;
+	user-select: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+	white-space: nowrap;
+	max-width: 100%;
+	will-change: transform;
+	pointer-events: none;
+
+	// &.secondary {
+	// 	background-color: transparent;
+	// 	border-color: $color-primary;
+	// 	color: $color-primary;
+	// }
+
+	// &.tertiary {
+	// 	background-color: transparent;
+	// 	border-color: $color-secondary;
+	// 	color: $color-secondary;
+	// }
+}
+
 img {
 	max-width: 100%;
 	height: auto;
 }
 
 a {
-	color: $mainBlue;
 	transition: color $speed-fast;
 	&:hover {
 		color: $color-secondary;
@@ -50,7 +90,7 @@ a {
 		i {
 			font-size: 40px;
 			border-radius: 50%;
-			background-color: $color-primary-alt;
+			background-color: $color-primary-200;
 			color: $color-light;
 			transition: all $speed-fast;
 		}

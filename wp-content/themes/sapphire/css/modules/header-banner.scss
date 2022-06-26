@@ -75,7 +75,7 @@
 		font-weight: $font-weight-regular;
 		line-height: 1.3em;
 		color: $color-dark;
-		text-shadow: -4px 4px 0px $color-primary-alt;
+		text-shadow: -4px 4px 0px $color-primary-200;
 		@include media-max($xs) {
 			text-align: center;
 		}

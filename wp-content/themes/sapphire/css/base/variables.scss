@@ -1,20 +1,27 @@
-$beige: #faf0ca;
-$mainYellow: #f4d35e;
-$mainBlue: #0d3b66;
-$lightOrange: #ee964b;
-$darkOrange: #f95738;
+// $beige: #faf0ca;
+// $mainYellow: #f4d35e;
+// $mainBlue: #0d3b66;
+// $lightOrange: #ee964b;
+// $darkOrange: #f95738;
 
 $olive: #e7e8e1;
-$dark-olive: #beceb8;
+$olive-200: #beceb8;
 $green: #91b185;
+$green-300: #316320;
+$green-500: #1D3A12;
 
 $gray-1000: #1a1b15;
 $color-light: #fff;
 $color-dark: #000;
 
 $color-primary: $olive;
-$color-primary-alt: $dark-olive;
+$color-primary-200: $olive-200;
+
 $color-secondary: $green;
+$color-secondary-300: $green-300;
+$color-secondary-500: $green-500;
+
+
 $font-primary: "Playfair Display", serif;
 $font-primary-alt: "EB Garamond", serif;
 $font-secondary: "Lobster", cursive;
