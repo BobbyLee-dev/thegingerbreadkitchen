@@ -113,7 +113,6 @@ class Sapphire_block {
 	}
 }
 
-new Sapphire_block('split-image-content');
 
 class Sapphire_block_php_render {
 	function __construct($name) {
@@ -121,7 +120,7 @@ class Sapphire_block_php_render {
 		add_action('init', [$this, 'on_init_register_block']);
 	}
 
-	function ourRenderCallback($attributes, $content) {
+	function sapphireRenderCallback($attributes, $content) {
     ob_start();
     require get_theme_file_path("/blocks/{$this->name}/{$this->name}.php");
     return ob_get_clean();
@@ -131,10 +130,11 @@ class Sapphire_block_php_render {
 		wp_register_script($this->name, get_stylesheet_directory_uri() . "/build/{$this->name}.js", array('wp-blocks', 'wp-editor'), true);
 		register_block_type("sapphiretheme/{$this->name}", array(
 		'editor_script' => $this->name,
-		'render_callback' => [$this, 'ourRenderCallback']
+		'render_callback' => [$this, 'sapphireRenderCallback']
 	));
 	}
 }
 
+new Sapphire_block_php_render('split-image-content');
 
 

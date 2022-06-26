@@ -34,14 +34,8 @@ body {
 	transition: $speed-fast all ease;
 	vertical-align: middle;
 	outline: none;
-	user-select: none;
-	overflow: hidden;
-	text-overflow: ellipsis;
 	text-transform: uppercase;
-	white-space: nowrap;
 	max-width: 100%;
-	will-change: transform;
-	pointer-events: none;
 
 	// &.secondary {
 	// 	background-color: transparent;

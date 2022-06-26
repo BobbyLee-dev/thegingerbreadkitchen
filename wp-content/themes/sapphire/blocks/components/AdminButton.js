@@ -24,6 +24,7 @@ function AdminButton({ buttonText, linkObject, setAttributes }) {
 	}
 
 	function handleLinkChange(newLink) {
+		console.log(newLink);
 		setAttributes({ linkObject: newLink });
 	}
 

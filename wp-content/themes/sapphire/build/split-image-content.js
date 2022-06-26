@@ -69,6 +69,7 @@ function AdminButton(_ref) {
   }
 
   function handleLinkChange(newLink) {
+    console.log(newLink);
     setAttributes({
       linkObject: newLink
     });
