@@ -46,7 +46,10 @@ function AdminButton({ buttonText, linkObject, setAttributes }) {
 				placeholder="Button"
 			/>
 			{isLinkPickerVisible && (
-				<Popover position="middle center">
+				<Popover
+					position="middle center"
+					onFocusOutside={() => setIsLinkPickerVisible(false)}
+				>
 					<LinkControl
 						settings={[]}
 						value={linkObject}

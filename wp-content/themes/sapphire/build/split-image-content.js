@@ -87,7 +87,8 @@ function AdminButton(_ref) {
     onChange: handleTextChange,
     placeholder: "Button"
   }), isLinkPickerVisible && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Popover, {
-    position: "middle center"
+    position: "middle center",
+    onFocusOutside: () => setIsLinkPickerVisible(false)
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.__experimentalLinkControl, {
     settings: [],
     value: linkObject,

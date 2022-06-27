@@ -1,6 +1,6 @@
 .split-image-content {
 	background-color: $color-primary;
-	padding: 180px 0;
+	padding: 140px 0;
 	@include media-max($md) {
 		flex-direction: column-reverse;
 		padding: 120px 0;
