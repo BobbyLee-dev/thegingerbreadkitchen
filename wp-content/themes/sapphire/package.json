@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "wp-scripts start src/index.js blocks/header/header.js blocks/split-image-content/split-image-content.js",
+		"start": "wp-scripts start src/index.js blocks/header/header.js blocks/split-image-content/split-image-content.js blocks/featured-recipe/featured-recipe.js",
 		"dev": "wp-scripts start",
 		"devFast": "wp-scripts start",
 		"test": "echo \"Error: no test specified\" && exit 1"

@@ -42,6 +42,30 @@ function sapphire_features() {
 
 add_action('after_setup_theme', 'sapphire_features');
 
+// Custom post types
+function sapphire_post_types() {
+	// Recipe Post Type
+  register_post_type('recipe', array(
+    'menu_icon' => 'dashicons-food',
+    'labels' => array(
+      'name' => 'Recipes',
+      'add_new_item' => 'Add New Recipe',
+      'edit_item' => 'Edit Recipe',
+      'all_items' => 'All Recipes',
+      'singular_name' => 'Recipe'
+    ),
+		'taxonomies' => array(
+			// 'post_tag',
+			'category'
+		),
+		'show_in_rest' => true,
+    'supports' => array('title', 'editor', 'thumbnail'),
+    'public' => true,
+  ));
+}
+
+add_action('init', 'sapphire_post_types');
+
 /*==================================
 =            Inline SVG            =
 ==================================*/
@@ -74,18 +98,18 @@ function social_media() {
 
 
 class PlaceholderBlock {
-  function __construct($name) {
+  public function __construct($name) {
     $this->name = $name;
     add_action('init', [$this, 'onInit']);
   }
 
-  function ourRenderCallback($attributes, $content) {
+  private function ourRenderCallback($attributes, $content) {
     ob_start();
     require get_theme_file_path("/blocks/{$this->name}/{$this->name}.php");
     return ob_get_clean();
   }
 
-  function onInit() {
+  public function onInit() {
     wp_register_script($this->name, get_stylesheet_directory_uri() . "/blocks/{$this->name}/{$this->name}.js", array('wp-blocks', 'wp-editor'));
     
     register_block_type("sapphiretheme/{$this->name}", array(
@@ -100,12 +124,12 @@ new PlaceholderBlock('header');
 new PlaceholderBlock('footer');
 
 class Sapphire_block {
-	function __construct($name) {
+	public function __construct($name) {
 		$this->name = $name;
 		add_action('init', [$this, 'on_init_register_block']);
 	}
 
-	function on_init_register_block() {
+	public function on_init_register_block() {
 		wp_register_script($this->name, get_stylesheet_directory_uri() . "/build/{$this->name}.js", array('wp-blocks', 'wp-editor'), true);
 		register_block_type("sapphiretheme/{$this->name}", array(
 		'editor_script' => $this->name,
@@ -115,26 +139,52 @@ class Sapphire_block {
 
 
 class Sapphire_block_php_render {
-	function __construct($name) {
+	public function __construct($name) {
 		$this->name = $name;
 		add_action('init', [$this, 'on_init_register_block']);
 	}
 
-	function sapphireRenderCallback($attributes, $content) {
+	private function sapphireRenderCallback($attributes, $content) {
     ob_start();
     require get_theme_file_path("/blocks/{$this->name}/{$this->name}.php");
     return ob_get_clean();
   }
 
-	function on_init_register_block() {
+	public function on_init_register_block() {
 		wp_register_script($this->name, get_stylesheet_directory_uri() . "/build/{$this->name}.js", array('wp-blocks', 'wp-editor'), true);
-		register_block_type("sapphiretheme/{$this->name}", array(
-		'editor_script' => $this->name,
-		'render_callback' => [$this, 'sapphireRenderCallback']
-	));
+			register_block_type("sapphiretheme/{$this->name}", array(
+			'editor_script' => $this->name,
+			'render_callback' => [$this, 'sapphireRenderCallback']
+		));
 	}
 }
 
 new Sapphire_block_php_render('split-image-content');
 
+// Creates custom endpoint for Recipe
+class Sapphire_block_featured_recipe {
+	public function __construct($name) {
+		$this->name = $name;
+		add_action('init', [$this, 'on_init_register_block']);
+		add_action('rest_api_init', [$this, 'recipe_html']);
+	}
 
+	public function recipe_html() {}
+	  
+
+	private function sapphireRenderCallback($attributes, $content) {
+    ob_start();
+    require get_theme_file_path("/blocks/{$this->name}/{$this->name}.php");
+    return ob_get_clean();
+  }
+
+	public function on_init_register_block() {
+		wp_register_script($this->name, get_stylesheet_directory_uri() . "/build/{$this->name}.js", array('wp-blocks', 'wp-editor'), true);
+			register_block_type("sapphiretheme/{$this->name}", array(
+			'editor_script' => $this->name,
+			'render_callback' => [$this, 'sapphireRenderCallback']
+		));
+	}
+}
+
+new Sapphire_block_featured_recipe('featured-recipe');
