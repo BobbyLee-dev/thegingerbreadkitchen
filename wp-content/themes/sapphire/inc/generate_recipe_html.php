@@ -9,7 +9,7 @@ function generate_recipe_html($id) {
   while($recipe_post->have_posts()) {
     $recipe_post->the_post();
     ob_start(); ?>
-    <div class="professor-callout">
+    <div class="featured-recipe">
       <div class="professor-callout__photo" style="background-image: url(<?php the_post_thumbnail_url('professorPortrait') ?>)"></div>
       <div class="professor-callout__text">
         <h5><?php the_title(); ?></h5>

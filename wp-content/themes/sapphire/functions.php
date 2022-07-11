@@ -160,43 +160,44 @@ class Sapphire_block_php_render {
 }
 
 new Sapphire_block_php_render('split-image-content');
+new Sapphire_block_php_render('featured-recipe');
 
 // Creates custom endpoint for Recipe
-class Sapphire_block_featured_recipe {
-	public function __construct($name) {
-		$this->name = $name;
-		require_once plugin_dir_path(__FILE__) . 'inc/generate_recipe_html.php';
-		add_action('init', [$this, 'on_init_register_block']);
-		// add_action('rest_api_init', [$this, 'recipe_html']);
-	}
+// class Sapphire_block_featured_recipe {
+// 	public function __construct($name) {
+// 		$this->name = $name;
+// 		require_once plugin_dir_path(__FILE__) . 'inc/generate_recipe_html.php';
+// 		add_action('init', [$this, 'on_init_register_block']);
+// 		// add_action('rest_api_init', [$this, 'recipe_html']);
+// 	}
 
-	public function recipe_html() {
-		register_rest_route('featured-recipe/v1', 'get-html', array(
-      'methods' => WP_REST_SERVER::READABLE,
-      'callback' => [$this, 'get_recipe_html']
-    ));
-	}
+// 	public function recipe_html() {
+// 		register_rest_route('featured-recipe/v1', 'get-html', array(
+//       'methods' => WP_REST_SERVER::READABLE,
+//       'callback' => [$this, 'get_recipe_html']
+//     ));
+// 	}
 
-	public function get_recipe_html() {
-		return '<h1>hi lol</h1>';
-	}
+// 	public function get_recipe_html() {
+// 		return '<h1>hi lol</h1>';
+// 	}
 	  
 
-	public function sapphire_render_callback($attributes) {
-    if ($attributes['recipeId']) {
-      return generate_recipe_html($attributes['recipeId']);
-    } else {
-      return NULL;
-    }
-  }
+// 	public function sapphire_render_callback($attributes) {
+//     if ($attributes['recipeId']) {
+//       return generate_recipe_html($attributes['recipeId']);
+//     } else {
+//       return NULL;
+//     }
+//   }
 
-	public function on_init_register_block() {
-		wp_register_script($this->name, get_stylesheet_directory_uri() . "/build/{$this->name}.js", array('wp-blocks', 'wp-editor'), true);
-			register_block_type("sapphiretheme/{$this->name}", array(
-			'editor_script' => $this->name,
-			'render_callback' => [$this, 'sapphire_render_callback']
-		));
-	}
-}
+// 	public function on_init_register_block() {
+// 		wp_register_script($this->name, get_stylesheet_directory_uri() . "/build/{$this->name}.js", array('wp-blocks', 'wp-editor'), true);
+// 			register_block_type("sapphiretheme/{$this->name}", array(
+// 			'editor_script' => $this->name,
+// 			'render_callback' => [$this, 'sapphire_render_callback']
+// 		));
+// 	}
+// }
 
-new Sapphire_block_featured_recipe('featured-recipe');
+// new Sapphire_block_featured_recipe('featured-recipe');
